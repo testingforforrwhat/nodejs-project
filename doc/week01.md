@@ -79,3 +79,14 @@
   [所以该实例不需要等待读取完成第一个文件就执行读取第二个&#34;不存在&#34;的文件](https://www.runoob.com/nodejs/nodejs-callback.html)
 
   ![1709615175588](image/week01/1709615175588.png)
+
+
+
+* [ ] 任务7 理解异步函数的编写，并且实现这个汇率转换器，以供后续项目使用。
+
+  ```
+
+  // npm 安装 axios 这个 JavaScript 库，以便在项目中使用它来进行 HTTP 请求
+  // 该命令行会下载 axios 库并将其添加到项目的 package.json 文件中的 dependencies 部分，以便在项目中引入和使用 axios
+  npm install --save axios
+  ```
