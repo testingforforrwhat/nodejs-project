@@ -18,7 +18,7 @@
   cd express_module
   npm install express 本地安装express框架
   ```
-* [ ] 任务4 全局安装express和react（虽然在本项目中可能不会使用到react）
+* [X] 任务4 全局安装express和react（虽然在本项目中可能不会使用到react）
 
   ```
   以管理员权限打开一个cmd窗口 (windows)
