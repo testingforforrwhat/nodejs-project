@@ -23,6 +23,6 @@
   ```
   以管理员权限打开一个cmd窗口 (windows)
   npm install -g  express 全局安装 Express
-  npm install -g create-react-app  全局安装 React
+  npm install -g create-react-app  全局安装 React (当您想在全局范围内安装 React 时，通常不会使用 npm install -g react 命令，而是使用 create-react-app 工具来创建 React 应用程序。这是因为 React 本身并不是一个命令行工具，而是一个 JavaScript 库，需要在项目中引入并使用)
 
   ```
