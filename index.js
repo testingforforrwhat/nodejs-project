@@ -7,3 +7,15 @@ const name = 'Alice';
 const greeting = helloFunction(name);
 
 console.log(greeting);
+
+
+// index.js
+
+const { add, subtract } = require('./functionsModule');
+
+const result1 = add(5, 3);
+console.log('Result of addition:', result1);
+
+const result2 = subtract(10, 4);
+console.log('Result of subtraction:', result2);
+
