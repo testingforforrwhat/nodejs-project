@@ -13,6 +13,9 @@ const getExchangeRate = async (fromCurrency, toCurrency) => {
         const rate = response.data.rates;    
         const euro = 1 / rate[fromCurrency];    
         const exchangeRate = euro * rate[toCurrency];    
+        console.log('fromCurrency:',fromCurrency);
+        console.log('toCurrency:',toCurrency);
+        console.log('exchangeRate:',exchangeRate);
         
         return exchangeRate;  } 
         catch (error) {    
