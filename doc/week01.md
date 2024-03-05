@@ -27,3 +27,46 @@
 
   ```
 * [ ] 任务5 体验process.nextTick()、process.on()函数的使用，了解node的生命周期管理机制
+
+  在 Node.js 中，`process.nextTick()` 和 `process.on()` 是两个重要的函数，用于处理事件循环和事件处理。
+
+在 Node.js 中，`process.nextTick()` 和 `process.on()` 是两个重要的函数，用于处理事件循环和事件处理。了解这些函数的使用可以帮助您更好地理解 Node.js 的生命周期管理机制。
+
+### 1. `process.nextTick()`
+
+- `process.nextTick()` 方法用于在当前操作完成后，立即在事件循环的下一个阶段执行指定的回调函数。它将回调函数放置在事件队列的头部，优先于微任务队列（Promise、process.nextTick() 和 setImmediate）中的任务。
+- 通常用于确保某些操作在当前操作完成后立即执行，而不会被阻塞在其他异步任务之后。
+- 示例：
+  ```javascript
+  console.log('Start');
+
+  process.nextTick(() => {
+    console.log('Next Tick');
+  });
+
+  console.log('End');
+  ```
+
+  输出顺序为 `Start -> End -> Next Tick`。
+
+### 2. `process.on()`
+
+- `process.on()` 方法用于注册事件监听器，可以监听 Node.js 进程的各种事件，如 `exit`、`uncaughtException` 等。
+- 可以用于处理进程中发生的异常、信号等事件。
+- 示例：
+  ```javascript
+  process.on('exit', (code) => {
+    console.log(`Node.js process exited with code: ${code}`);
+  });
+  ```
+
+### Node.js 的生命周期管理机制
+
+- Node.js 的生命周期由事件循环和事件处理机制控制。
+- 在启动 Node.js 应用程序时，会执行一系列初始化操作，然后进入事件循环等待事件的发生。
+- 事件循环包括不同阶段（timers、pending callbacks、idle、prepare、poll、check、close callbacks），在每个阶段执行相应的操作。
+- 通过注册事件监听器，可以在不同阶段处理相应的事件。
+- `process.nextTick()` 可以插入微任务队列中的任务，优先于其他异步任务执行。
+- 了解事件循环和事件处理机制有助于编写高效的 Node.js 应用程序，并避免阻塞和死锁等问题。
+
+通过使用 `process.nextTick()` 和 `process.on()` 函数，您可以更好地控制事件的执行顺序和处理进程中的各种事件。
