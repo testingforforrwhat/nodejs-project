@@ -16,5 +16,6 @@
   mkdir express_tutorial 创建一个名为 express_tutorial 的文件夹作为项目学习目录
   mkdir express_module
   cd express_module
+  npm init -y 初始化操作会创建一个 package.json 文件，其中包含项目的配置信息和依赖项列表
   npm install express 本地安装express框架
   ```
