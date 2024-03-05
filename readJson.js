@@ -24,7 +24,7 @@ function readJSONFiles(files, callback) {
 }
 
 // 要读取的 JSON 文件列表
-const filesToRead = ['./resources/test.json'];
+const filesToRead = ['./resources/test.json', './resources/noteExist.json'];
 
 readJSONFiles(filesToRead, (results) => {
     results.forEach((result) => {
